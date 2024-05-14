@@ -8,7 +8,7 @@ using DATOS;
 
 namespace APLICACION
 {
-    public class ServicioProducto : IServicioPRoducto
+    public class ServicioProducto : IServicioProducto
     {
        RepositorioProducto repositorio = new RepositorioProducto();
 

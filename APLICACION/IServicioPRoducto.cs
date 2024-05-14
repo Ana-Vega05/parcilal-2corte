@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace APLICACION
 {
-    public interface IServicioPRoducto
+    public interface IServicioProducto
     {
 
         public void CrearProducto(Producto producto);
