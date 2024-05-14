@@ -12,7 +12,9 @@ namespace PRESENTACION
         public Form1()
         {
             InitializeComponent();
-            LlenarTabla();
+            InitializeComboBox();
+            LlenarTablaDetalles();
+            LlenarTablaProductos();
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -23,7 +25,7 @@ namespace PRESENTACION
                 var productoSeleciconado = (bool?)item.Cells[0].Value;
                 if (productoSeleciconado != null && productoSeleciconado == true)
                 {
-                    var referenciaProducto = int.Parse(item.Cells[1].Value.ToString());
+                    var referenciaProducto = item.Cells[1].Value.ToString();
                     var nombreProducto = item.Cells[2].Value.ToString();
                     var stockProducto = int.Parse(item.Cells[3].Value.ToString());
                     var precioUnitarioProducto = double.Parse(item.Cells[4].Value.ToString());
@@ -48,7 +50,13 @@ namespace PRESENTACION
                 Factura factura = new Factura(idFactura, fechaFactura);
                 factura.DetallesFactura = Detalles;
                 ServicioFactura.CrearFactura(factura);
-                LlenarTabla();
+                foreach (var producto in Detalles)
+                {
+                    ServicioProducto.DescontarCantidad(producto.ReferenciaProducto, producto.Cantidad);
+                }
+                LlenarTablaDetalles();
+                LlenarTablaProductos();
+                Limpiar();
             }
             catch (Exception)
             {
@@ -63,7 +71,7 @@ namespace PRESENTACION
             cantidadTxt.Text = string.Empty;
         }
 
-        private void LlenarTabla()
+        private void LlenarTablaDetalles()
         {
             detallesDtG.Rows.Clear();
             List<Producto> productos = ServicioProducto.ConsultarProductos();
@@ -78,9 +86,20 @@ namespace PRESENTACION
             }
         }
 
-        ServicioProducto servicioProducto = new ServicioProducto();
-
-
+        private void LlenarTablaProductos()
+        {
+            dataGridView1.Rows.Clear();
+            List<Producto> productos = ServicioProducto.ConsultarProductos();
+            foreach (Producto producto in productos)
+            {
+                int rowIndex = dataGridView1.Rows.Add();
+                DataGridViewRow row = dataGridView1.Rows[rowIndex];
+                row.Cells[1].Value = producto.Referencia;
+                row.Cells[2].Value = producto.Nombre;
+                row.Cells[3].Value = producto.Existencias;
+                row.Cells[4].Value = producto.PrecioUnitario;
+            }
+        }
 
         private void InitializeComboBox()
         {
@@ -94,29 +113,26 @@ namespace PRESENTACION
 
             string referencia = Txt_Referencia.Text;
 
-            string nombre = Txt_Nombre.Text;    
+            string nombre = Txt_Nombre.Text;
             int existencia = int.Parse(Txt_Existencias.Text);
-            int stocks = int.Parse(Txt_Stock.Text);  
+            int stocks = int.Parse(Txt_Stock.Text);
             int precioUnitarios = int.Parse(Txt_PrecioUnitario.Text);
             EstadoProducto estadoProducto = (EstadoProducto)Cmb_Estado.SelectedIndex;
 
-            Producto productoNuevo = new Producto(referencia,nombre,existencia,stocks,precioUnitarios,estadoProducto);    
+            Producto productoNuevo = new Producto(referencia, nombre, existencia, stocks, precioUnitarios, estadoProducto);
 
 
             ServicioProducto servicioProducto = new ServicioProducto();
 
             servicioProducto.CrearProducto(productoNuevo);
             MessageBox.Show("Datos Registrados con exito", "Rgistrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
-
+            LlenarTablaProductos();
+            LlenarTablaDetalles();
         }
 
-
-
-
-       
-
-
-
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Limpiar();
+        }
     }
 }

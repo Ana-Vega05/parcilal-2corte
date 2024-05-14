@@ -31,17 +31,25 @@ namespace ENTIDADES
             EstadoProducto = estadoProducto;
         }
 
-
-        public override string ToString()
+        public void DescontarCantidad(int cantidad)
         {
-            return $"{Referencia},{Nombre},{Existencias},{StockMinimo},{PrecioUnitario},{EstadoProducto}";
+            if (cantidad >= Existencias)
+            {
+                Existencias = 0;
+            }
+            else
+            {
+                Existencias -= cantidad;
+            }
         }
 
 
-
-
+        public override string ToString()
+        {
+            return $"{Referencia},{Nombre},{Existencias},{StockMinimo},{PrecioUnitario},{(int)EstadoProducto}";
+        }
 
 
     }
-    }
+ }
 

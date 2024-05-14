@@ -49,21 +49,28 @@ namespace DATOS
 
         public List<Factura> ConsultarFacturas()
         {
-            var facturas = new List<Factura>();
-            var options = new FileStreamOptions()
+            try
             {
-                Access = FileAccess.Read
-            };
-            using var reader = new StreamReader(FilePath, options);
-            var line = reader.ReadLine();
-            while (line != null)
-            {
-                var lineValues = line.Split(',');
-                Factura factura = MapearFactura(lineValues);
-                facturas.Add(factura);
-                line = reader.ReadLine();
+                var facturas = new List<Factura>();
+                var options = new FileStreamOptions()
+                {
+                    Access = FileAccess.Read
+                };
+                using var reader = new StreamReader(FilePath, options);
+                var line = reader.ReadLine();
+                while (line != null)
+                {
+                    var lineValues = line.Split(',');
+                    Factura factura = MapearFactura(lineValues);
+                    facturas.Add(factura);
+                    line = reader.ReadLine();
+                }
+                return facturas;
             }
-            return facturas;
+            catch (Exception)
+            {
+                return new List<Factura>();
+            }
         }
 
         public Factura MapearFactura(string[] lineValues)
@@ -102,11 +109,11 @@ namespace DATOS
         public DetalleFactura MapearDetalleFactura(string[]? lineValues)
         {
             var idDetalle = int.Parse(lineValues[0]);
-            var referenciaProducto = int.Parse(lineValues[1]);
+            var referenciaProducto = lineValues[1];
             var nombreProducto = lineValues[2];
             var cantidadProducto = int.Parse(lineValues[3]);
             var precioProducto = double.Parse(lineValues[4]);
-            DetalleFactura detalle = new DetalleFactura(idDetalle, referenciaProducto, nombreProducto, cantidadProducto, precioProducto);
+            DetalleFactura detalle = new DetalleFactura(idDetalle, cantidadProducto, nombreProducto, referenciaProducto, precioProducto);
             return detalle;
         }
 

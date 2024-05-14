@@ -76,16 +76,19 @@ namespace DATOS
             }
         }
 
+        public void ActualizarProducto(Producto productoActualizar)
+        {
+            var productos = EncontrarProductos();
+            var productoEncontrado = productos.FirstOrDefault(producto => producto.Referencia == productoActualizar.Referencia);
+            if (productoEncontrado == null)
+                return;
 
-
-
-
-
-
-
-
-
-
+            productos.Remove(productoEncontrado);
+            productos.Add(productoActualizar);
+            File.Delete(FilePath);
+            foreach (var producto in productos)
+                Registrar(producto);
+        }
     }
 
 

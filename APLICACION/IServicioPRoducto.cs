@@ -13,7 +13,7 @@ namespace APLICACION
         public void CrearProducto(Producto producto);
         public List<Producto> ConsultarProductos();
         public Producto ConsultarProducto(string referencia);
-
+        void DescontarCantidad(string referencia, int cantidad);
 
 
 

@@ -13,7 +13,6 @@ namespace DATOS
 
         public void Registrar(Producto producto);
         public Producto EncontrarProducto(string referencia);
-
         public List<Producto> EncontrarProductos();
 
     }

@@ -25,7 +25,7 @@ namespace APLICACION
         public void CrearFactura(Factura factura)
         {
             var ultimaFactura = ConsultarFacturas().LastOrDefault();
-            if (factura.Fechafactura >= ultimaFactura.Fechafactura)
+            if (ultimaFactura != null && factura.Fechafactura >= ultimaFactura.Fechafactura)
             {
                 throw new Exception($"La fecha de la factura debe ser mayor o igual a {ultimaFactura.Fechafactura}");
             }

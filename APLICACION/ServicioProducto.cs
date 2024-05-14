@@ -17,27 +17,24 @@ namespace APLICACION
         {
 
             return repositorio.EncontrarProducto(referencia);
-
-
         }
         
         public List<Producto> ConsultarProductos()
         {
-
-
             var productos = repositorio.EncontrarProductos();
             return productos;
-
-
         }
 
         public void CrearProducto(Producto producto)
         {
-
             repositorio.Registrar(producto);
+        }
 
-
-
+        public void DescontarCantidad(string referencia, int cantidad)
+        {
+            var producto = ConsultarProducto(referencia);
+            producto.DescontarCantidad(cantidad);
+            repositorio.ActualizarProducto(producto);
         }
     }
 }

@@ -28,5 +28,11 @@ namespace ENTIDADES
             this.idfactura = idfactura;
             Fechafactura = fechafactura;
         }
+
+        public override string ToString()
+        {
+            return $"{idfactura},{Fechafactura},{ValorTotal}";
+
+        }
     }
 }
