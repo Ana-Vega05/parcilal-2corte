@@ -1,5 +1,6 @@
 using APLICACION;
 using ENTIDADES;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace PRESENTACION
 {
@@ -99,22 +100,40 @@ namespace PRESENTACION
             int stocks = int.Parse(Txt_Stock.Text);  
             int precioUnitarios = int.Parse(Txt_PrecioUnitario.Text);
             EstadoProducto estadoProducto = (EstadoProducto)Cmb_Estado.SelectedIndex;
-
+            ValidarCampos();
             Producto productoNuevo = new Producto(referencia,nombre,existencia,stocks,precioUnitarios,estadoProducto);    
 
 
             ServicioProducto servicioProducto = new ServicioProducto();
 
             servicioProducto.CrearProducto(productoNuevo);
-            MessageBox.Show("Datos Registrados con exito", "Rgistrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
+            MessageBox.Show("Datos Registrados con exito", "Rgistrado", MessageBoxButtons.OK, MessageBoxIcon.Information); 
 
+    }
+
+
+        private bool ValidarCampos()
+        {
+            // Validar cada campo y retornar false si alguno es inválido
+            if (string.IsNullOrWhiteSpace(Txt_Referencia.Text))
+                MessageBox.Show("La referencia no puede estar vacía");
+            if (string.IsNullOrWhiteSpace(Txt_Nombre.Text))
+                MessageBox.Show("El nombre no puede estar vacío");
+            if (!int.TryParse(Txt_Existencias.Text, out ))
+                MessageBox.Show("Las existencias deben ser un valor numérico");
+            if (!int.TryParse(Txt_Stock.Text, out ))
+                MessageBox.Show("El stock mínimo debe ser un valor numérico");
+            if (!decimal.TryParse(Txt_PrecioUnitario.Text, out ))
+                MessageBox.Show("El precio unitario debe ser un valor numérico");
+            if (Cmb_Estado.SelectedIndex < 0 || Cmb_Estado.SelectedIndex >= Enum.GetNames(typeof(EstadoProducto)).Length)
+                MessageBox.Show("Debe seleccionar un estado válido (Activo/Inactivo)");
+            //if (servicioProducto.ExisteProducto(Txt_Referencia.Text))
+            //    return MostrarError("La referencia del producto ya existe");
+
+            // Si todas las validaciones son correctas, retornar true
+            return true;
         }
 
-
-
-
-       
 
 
 
