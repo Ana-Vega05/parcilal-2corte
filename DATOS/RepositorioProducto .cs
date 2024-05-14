@@ -78,12 +78,14 @@ namespace DATOS
 
         public List<Producto> FiltrarPorEstado(EstadoProducto estado)
         {
-            return Producto.Where(p => p.Estado == estado).ToList();
+            var productos = EncontrarProductos();
+            return productos.Where(p => p.EstadoProducto == estado).ToList();
         }
 
         public List<Producto> FiltrarPorNombre(string nombre)
         {
-            return _productos.Where(p => p.Nombre.Contains(nombre, StringComparison.OrdinalIgnoreCase)).ToList();
+            var productos = EncontrarProductos();
+            return productos.Where(p => p.Nombre.Contains(nombre, StringComparison.OrdinalIgnoreCase)).ToList();
         }
 
         public void ActualizarProducto(Producto productoActualizar)
