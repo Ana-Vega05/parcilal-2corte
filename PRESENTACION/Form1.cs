@@ -131,8 +131,6 @@ namespace PRESENTACION
             LlenarTablaDetalles();
         }
 
-    }
-
 
         private bool ValidarCampos()
         {
@@ -155,9 +153,6 @@ namespace PRESENTACION
             // Si todas las validaciones son correctas, retornar true
             return true;
         }
-
-
-
 
         private void button3_Click(object sender, EventArgs e)
         {
