@@ -9,6 +9,7 @@ namespace PRESENTACION
         {
             InitializeComponent();
             InitializeComboBox();
+            CargarDatosTabla();
         }
 
         ServicioProducto servicioProducto = new ServicioProducto();
@@ -40,14 +41,23 @@ namespace PRESENTACION
 
             servicioProducto.CrearProducto(productoNuevo);
             MessageBox.Show("Datos Registrados con exito", "Rgistrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Dispose();
+            
 
+        }
+
+        private void CargarDatosTabla()
+        {
+            ServicioProducto servicioProducto = new ServicioProducto();
+            var productos = servicioProducto.ConsultarProductos();
+            Dtg_Productos.Rows.Clear();
+            foreach (var producto in productos)
+            {
+                Dtg_Productos.Rows.Add(producto.Referencia, producto.Nombre, Txt_Existencias, producto.StockMinimo, producto.PrecioUnitario, producto.EstadoProducto);
+            }
         }
 
 
 
-
-       
 
 
 

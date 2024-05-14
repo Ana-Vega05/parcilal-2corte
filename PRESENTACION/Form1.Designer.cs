@@ -56,7 +56,7 @@
             label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            dataGridView1 = new DataGridView();
+            Dtg_Productos = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -91,7 +91,7 @@
             Column10 = new DataGridViewTextBoxColumn();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)Dtg_Productos).BeginInit();
             tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
             tabPage3.SuspendLayout();
@@ -130,7 +130,7 @@
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(label5);
             tabPage1.Controls.Add(label4);
-            tabPage1.Controls.Add(dataGridView1);
+            tabPage1.Controls.Add(Dtg_Productos);
             tabPage1.Location = new Point(4, 29);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
@@ -308,13 +308,13 @@
             label4.TabIndex = 5;
             label4.Text = "Referencia";
             // 
-            // dataGridView1
+            // Dtg_Productos
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.BorderStyle = BorderStyle.None;
-            dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            Dtg_Productos.BackgroundColor = Color.White;
+            Dtg_Productos.BorderStyle = BorderStyle.None;
+            Dtg_Productos.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            Dtg_Productos.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            Dtg_Productos.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle10.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = SystemColors.Control;
             dataGridViewCellStyle10.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -322,9 +322,9 @@
             dataGridViewCellStyle10.SelectionBackColor = Color.White;
             dataGridViewCellStyle10.SelectionForeColor = Color.Black;
             dataGridViewCellStyle10.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
+            Dtg_Productos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle10;
+            Dtg_Productos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            Dtg_Productos.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
             dataGridViewCellStyle11.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle11.BackColor = Color.White;
             dataGridViewCellStyle11.Font = new Font("Segoe UI", 9F);
@@ -332,11 +332,11 @@
             dataGridViewCellStyle11.SelectionBackColor = Color.White;
             dataGridViewCellStyle11.SelectionForeColor = Color.Black;
             dataGridViewCellStyle11.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle11;
-            dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(25, 127);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            Dtg_Productos.DefaultCellStyle = dataGridViewCellStyle11;
+            Dtg_Productos.EnableHeadersVisualStyles = false;
+            Dtg_Productos.Location = new Point(25, 127);
+            Dtg_Productos.Name = "Dtg_Productos";
+            Dtg_Productos.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle12.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle12.BackColor = Color.White;
             dataGridViewCellStyle12.Font = new Font("Segoe UI", 9F);
@@ -344,10 +344,10 @@
             dataGridViewCellStyle12.SelectionBackColor = Color.White;
             dataGridViewCellStyle12.SelectionForeColor = Color.Black;
             dataGridViewCellStyle12.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(809, 523);
-            dataGridView1.TabIndex = 0;
+            Dtg_Productos.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            Dtg_Productos.RowHeadersWidth = 51;
+            Dtg_Productos.Size = new Size(809, 523);
+            Dtg_Productos.TabIndex = 0;
             // 
             // Column1
             // 
@@ -707,7 +707,7 @@
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             tabPage1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)Dtg_Productos).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
@@ -723,7 +723,7 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private TabPage tabPage3;
-        private DataGridView dataGridView1;
+        private DataGridView Dtg_Productos;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
