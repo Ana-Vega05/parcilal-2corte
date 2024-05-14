@@ -6,16 +6,9 @@ using System.Threading.Tasks;
 
 namespace ENTIDADES
 {
-    public class Enumcs
+    public enum EstadoProducto
     {
-
-        public enum Estado
-        {
-            Activo = 1,
-            Inactivo = 2
-        }
-
-
-
+        activo = 0,
+        inactivo = 1
     }
 }

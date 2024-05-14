@@ -8,18 +8,11 @@ namespace ENTIDADES
 {
     public class Producto
     {
-
-        
-            public string Referencia { get; set; }
-            public string Nombre { get; set; }
-            public int Existencias { get; set; }
-            public int StockMinimo { get; set; }
-            public decimal PrecioUnitario { get; set; }
-
-
-        
-
-
-
+        public string Referencia { get; set; }
+        public string Nombre { get; set; }
+        public int Existencias { get; set; }
+        public int StockMinimo { get; set; }
+        public decimal PrecioUnitario { get; set; }
+        public EstadoProducto EstadoProducto { get; set; }
     }
 }
