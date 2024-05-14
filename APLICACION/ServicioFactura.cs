@@ -29,7 +29,6 @@ namespace APLICACION
             {
                 throw new Exception($"La fecha de la factura debe ser mayor o igual a {ultimaFactura.Fechafactura}");
             }
-            factura.idfactura = ultimaFactura.idfactura + 1;
             Repositorio.CrearFactura(factura);
             
         }
