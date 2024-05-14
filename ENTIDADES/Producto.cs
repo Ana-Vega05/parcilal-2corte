@@ -14,5 +14,7 @@ namespace ENTIDADES
         public int StockMinimo { get; set; }
         public decimal PrecioUnitario { get; set; }
         public EstadoProducto EstadoProducto { get; set; }
+
+
     }
 }

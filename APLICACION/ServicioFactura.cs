@@ -30,7 +30,10 @@ namespace APLICACION
                 throw new Exception($"La fecha de la factura debe ser mayor o igual a {ultimaFactura.Fechafactura}");
             }
             Repositorio.CrearFactura(factura);
-            
+            foreach (var detalle in factura.DetallesFactura)
+            {
+                // TODO: DESCONTAR CANTIDADES DE PRODUCTOS
+            }
         }
         
     }

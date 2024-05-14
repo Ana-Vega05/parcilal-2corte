@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle22 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle23 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle24 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle25 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle26 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle27 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle19 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle20 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle21 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle9 = new DataGridViewCellStyle();
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             label10 = new Label();
@@ -64,40 +64,42 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             tabPage2 = new TabPage();
-            tabPage3 = new TabPage();
-            comboBox4 = new ComboBox();
-            textBox8 = new TextBox();
-            button3 = new Button();
-            button4 = new Button();
-            dataGridView3 = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            Column10 = new DataGridViewTextBoxColumn();
-            button1 = new Button();
-            button2 = new Button();
-            label12 = new Label();
-            textBox5 = new TextBox();
-            label13 = new Label();
+            dateTimePicker1 = new DateTimePicker();
             label14 = new Label();
             textBox6 = new TextBox();
             dataGridView2 = new DataGridView();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
             Column9 = new DataGridViewTextBoxColumn();
-            dateTimePicker1 = new DateTimePicker();
-            textBox1 = new TextBox();
+            button1 = new Button();
+            button2 = new Button();
+            label12 = new Label();
+            textBox5 = new TextBox();
+            label13 = new Label();
+            tabPage3 = new TabPage();
+            cantidadTxt = new TextBox();
+            button5 = new Button();
+            fechaFacturaDate = new DateTimePicker();
             label1 = new Label();
+            idFacturaTxt = new TextBox();
+            label2 = new Label();
+            comboBox4 = new ComboBox();
+            textBox8 = new TextBox();
+            button3 = new Button();
+            button4 = new Button();
+            detallesDtG = new DataGridView();
+            Seleccion = new DataGridViewCheckBoxColumn();
+            Referencia = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
+            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             tabPage2.SuspendLayout();
-            tabPage3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView2).BeginInit();
+            tabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)detallesDtG).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -107,9 +109,10 @@
             tabControl1.Controls.Add(tabPage3);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
+            tabControl1.Margin = new Padding(3, 2, 3, 2);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(1445, 766);
+            tabControl1.Size = new Size(1199, 562);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -133,10 +136,11 @@
             tabPage1.Controls.Add(Txt_Referencia);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(dataGridView1);
-            tabPage1.Location = new Point(4, 29);
+            tabPage1.Location = new Point(4, 24);
+            tabPage1.Margin = new Padding(3, 2, 3, 2);
             tabPage1.Name = "tabPage1";
-            tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(1437, 733);
+            tabPage1.Padding = new Padding(3, 2, 3, 2);
+            tabPage1.Size = new Size(1191, 534);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "Productos";
             // 
@@ -144,9 +148,9 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(25, 20);
+            label10.Location = new Point(22, 15);
             label10.Name = "label10";
-            label10.Size = new Size(160, 41);
+            label10.Size = new Size(131, 32);
             label10.TabIndex = 22;
             label10.Text = "Productos";
             // 
@@ -154,28 +158,31 @@
             // 
             comboBox3.ForeColor = SystemColors.InactiveCaption;
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(588, 82);
+            comboBox3.Location = new Point(514, 62);
+            comboBox3.Margin = new Padding(3, 2, 3, 2);
             comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(237, 28);
+            comboBox3.Size = new Size(208, 23);
             comboBox3.TabIndex = 21;
             comboBox3.Text = "Filtrar";
             // 
             // textBox7
             // 
             textBox7.ForeColor = SystemColors.InactiveCaption;
-            textBox7.Location = new Point(25, 80);
+            textBox7.Location = new Point(22, 60);
+            textBox7.Margin = new Padding(3, 2, 3, 2);
             textBox7.Multiline = true;
             textBox7.Name = "textBox7";
-            textBox7.Size = new Size(533, 30);
+            textBox7.Size = new Size(467, 24);
             textBox7.TabIndex = 20;
             textBox7.Text = "Buscar";
             // 
             // Btn_Limpiar
             // 
             Btn_Limpiar.FlatStyle = FlatStyle.System;
-            Btn_Limpiar.Location = new Point(1036, 600);
+            Btn_Limpiar.Location = new Point(906, 450);
+            Btn_Limpiar.Margin = new Padding(3, 2, 3, 2);
             Btn_Limpiar.Name = "Btn_Limpiar";
-            Btn_Limpiar.Size = new Size(148, 38);
+            Btn_Limpiar.Size = new Size(130, 28);
             Btn_Limpiar.TabIndex = 19;
             Btn_Limpiar.Text = "Limpiar";
             Btn_Limpiar.UseVisualStyleBackColor = true;
@@ -185,9 +192,10 @@
             Cmb_Estado.BackColor = Color.White;
             Cmb_Estado.FlatStyle = FlatStyle.Popup;
             Cmb_Estado.FormattingEnabled = true;
-            Cmb_Estado.Location = new Point(853, 546);
+            Cmb_Estado.Location = new Point(746, 410);
+            Cmb_Estado.Margin = new Padding(3, 2, 3, 2);
             Cmb_Estado.Name = "Cmb_Estado";
-            Cmb_Estado.Size = new Size(331, 28);
+            Cmb_Estado.Size = new Size(290, 23);
             Cmb_Estado.TabIndex = 18;
             // 
             // Btn_Guardar
@@ -197,9 +205,10 @@
             Btn_Guardar.FlatAppearance.BorderSize = 2;
             Btn_Guardar.FlatAppearance.MouseDownBackColor = Color.Transparent;
             Btn_Guardar.FlatStyle = FlatStyle.System;
-            Btn_Guardar.Location = new Point(852, 600);
+            Btn_Guardar.Location = new Point(746, 450);
+            Btn_Guardar.Margin = new Padding(3, 2, 3, 2);
             Btn_Guardar.Name = "Btn_Guardar";
-            Btn_Guardar.Size = new Size(152, 38);
+            Btn_Guardar.Size = new Size(133, 28);
             Btn_Guardar.TabIndex = 17;
             Btn_Guardar.Text = "Guardar";
             Btn_Guardar.UseVisualStyleBackColor = true;
@@ -207,46 +216,50 @@
             // Txt_Stock
             // 
             Txt_Stock.BorderStyle = BorderStyle.None;
-            Txt_Stock.Location = new Point(852, 458);
+            Txt_Stock.Location = new Point(746, 344);
+            Txt_Stock.Margin = new Padding(3, 2, 3, 2);
             Txt_Stock.Multiline = true;
             Txt_Stock.Name = "Txt_Stock";
-            Txt_Stock.Size = new Size(332, 34);
+            Txt_Stock.Size = new Size(290, 26);
             Txt_Stock.TabIndex = 15;
             // 
             // Txt_PrecioUnitario
             // 
             Txt_PrecioUnitario.BorderStyle = BorderStyle.None;
-            Txt_PrecioUnitario.Location = new Point(852, 378);
+            Txt_PrecioUnitario.Location = new Point(746, 284);
+            Txt_PrecioUnitario.Margin = new Padding(3, 2, 3, 2);
             Txt_PrecioUnitario.Multiline = true;
             Txt_PrecioUnitario.Name = "Txt_PrecioUnitario";
-            Txt_PrecioUnitario.Size = new Size(332, 34);
+            Txt_PrecioUnitario.Size = new Size(290, 26);
             Txt_PrecioUnitario.TabIndex = 14;
             // 
             // Txt_Cantidad
             // 
             Txt_Cantidad.BorderStyle = BorderStyle.None;
-            Txt_Cantidad.Location = new Point(852, 301);
+            Txt_Cantidad.Location = new Point(746, 226);
+            Txt_Cantidad.Margin = new Padding(3, 2, 3, 2);
             Txt_Cantidad.Multiline = true;
             Txt_Cantidad.Name = "Txt_Cantidad";
-            Txt_Cantidad.Size = new Size(332, 34);
+            Txt_Cantidad.Size = new Size(290, 26);
             Txt_Cantidad.TabIndex = 13;
             // 
             // Txt_Nombre
             // 
             Txt_Nombre.BorderStyle = BorderStyle.None;
-            Txt_Nombre.Location = new Point(852, 231);
+            Txt_Nombre.Location = new Point(746, 173);
+            Txt_Nombre.Margin = new Padding(3, 2, 3, 2);
             Txt_Nombre.Multiline = true;
             Txt_Nombre.Name = "Txt_Nombre";
-            Txt_Nombre.Size = new Size(332, 34);
+            Txt_Nombre.Size = new Size(290, 26);
             Txt_Nombre.TabIndex = 12;
             // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label9.Location = new Point(852, 505);
+            label9.Location = new Point(746, 379);
             label9.Name = "label9";
-            label9.Size = new Size(88, 27);
+            label9.Size = new Size(72, 22);
             label9.TabIndex = 11;
             label9.Text = "Estado";
             // 
@@ -254,9 +267,9 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label8.Location = new Point(852, 271);
+            label8.Location = new Point(746, 203);
             label8.Name = "label8";
-            label8.Size = new Size(123, 27);
+            label8.Size = new Size(99, 22);
             label8.TabIndex = 10;
             label8.Text = "Cantidad";
             // 
@@ -264,9 +277,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label7.Location = new Point(852, 344);
+            label7.Location = new Point(746, 258);
             label7.Name = "label7";
-            label7.Size = new Size(178, 27);
+            label7.Size = new Size(139, 22);
             label7.TabIndex = 9;
             label7.Text = "Precio Unitario";
             // 
@@ -274,9 +287,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label6.Location = new Point(852, 423);
+            label6.Location = new Point(746, 317);
             label6.Name = "label6";
-            label6.Size = new Size(73, 27);
+            label6.Size = new Size(60, 22);
             label6.TabIndex = 8;
             label6.Text = "Stock";
             // 
@@ -284,28 +297,29 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(852, 198);
+            label5.Location = new Point(746, 148);
             label5.Name = "label5";
-            label5.Size = new Size(104, 27);
+            label5.Size = new Size(84, 22);
             label5.TabIndex = 7;
             label5.Text = "Nombre";
             // 
             // Txt_Referencia
             // 
             Txt_Referencia.BorderStyle = BorderStyle.None;
-            Txt_Referencia.Location = new Point(852, 159);
+            Txt_Referencia.Location = new Point(746, 119);
+            Txt_Referencia.Margin = new Padding(3, 2, 3, 2);
             Txt_Referencia.Multiline = true;
             Txt_Referencia.Name = "Txt_Referencia";
-            Txt_Referencia.Size = new Size(332, 34);
+            Txt_Referencia.Size = new Size(290, 26);
             Txt_Referencia.TabIndex = 6;
             // 
             // label4
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(852, 127);
+            label4.Location = new Point(746, 95);
             label4.Name = "label4";
-            label4.Size = new Size(136, 27);
+            label4.Size = new Size(110, 22);
             label4.TabIndex = 5;
             label4.Text = "Referencia";
             // 
@@ -316,38 +330,39 @@
             dataGridView1.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView1.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridView1.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle22.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle22.BackColor = SystemColors.Control;
-            dataGridViewCellStyle22.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle22.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle22.SelectionBackColor = Color.White;
-            dataGridViewCellStyle22.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle22.WrapMode = DataGridViewTriState.True;
-            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = SystemColors.Control;
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
-            dataGridViewCellStyle23.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle23.BackColor = Color.White;
-            dataGridViewCellStyle23.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle23.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle23.SelectionBackColor = Color.White;
-            dataGridViewCellStyle23.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle23.WrapMode = DataGridViewTriState.False;
-            dataGridView1.DefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.White;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.White;
+            dataGridViewCellStyle2.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
             dataGridView1.EnableHeadersVisualStyles = false;
-            dataGridView1.Location = new Point(25, 127);
+            dataGridView1.Location = new Point(22, 95);
+            dataGridView1.Margin = new Padding(3, 2, 3, 2);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle24.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = Color.White;
-            dataGridViewCellStyle24.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle24.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle24.SelectionBackColor = Color.White;
-            dataGridViewCellStyle24.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle24.WrapMode = DataGridViewTriState.True;
-            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = Color.White;
+            dataGridViewCellStyle3.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.Size = new Size(809, 523);
+            dataGridView1.Size = new Size(708, 392);
             dataGridView1.TabIndex = 0;
             // 
             // Column1
@@ -395,8 +410,6 @@
             // tabPage2
             // 
             tabPage2.BackColor = Color.Silver;
-            tabPage2.Controls.Add(textBox1);
-            tabPage2.Controls.Add(label1);
             tabPage2.Controls.Add(dateTimePicker1);
             tabPage2.Controls.Add(label14);
             tabPage2.Controls.Add(textBox6);
@@ -406,225 +419,40 @@
             tabPage2.Controls.Add(label12);
             tabPage2.Controls.Add(textBox5);
             tabPage2.Controls.Add(label13);
-            tabPage2.Location = new Point(4, 29);
+            tabPage2.Location = new Point(4, 24);
+            tabPage2.Margin = new Padding(3, 2, 3, 2);
             tabPage2.Name = "tabPage2";
-            tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(1437, 733);
+            tabPage2.Padding = new Padding(3, 2, 3, 2);
+            tabPage2.Size = new Size(1191, 534);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "Factura";
             // 
-            // tabPage3
+            // dateTimePicker1
             // 
-            tabPage3.BackColor = Color.Silver;
-            tabPage3.Controls.Add(comboBox4);
-            tabPage3.Controls.Add(textBox8);
-            tabPage3.Controls.Add(button3);
-            tabPage3.Controls.Add(button4);
-            tabPage3.Controls.Add(dataGridView3);
-            tabPage3.Location = new Point(4, 29);
-            tabPage3.Name = "tabPage3";
-            tabPage3.Size = new Size(1437, 733);
-            tabPage3.TabIndex = 2;
-            tabPage3.Text = "LIsta Productos";
-            // 
-            // comboBox4
-            // 
-            comboBox4.ForeColor = SystemColors.InactiveCaption;
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(609, 90);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(367, 28);
-            comboBox4.TabIndex = 38;
-            comboBox4.Text = "Filtrar";
-            // 
-            // textBox8
-            // 
-            textBox8.ForeColor = SystemColors.InactiveCaption;
-            textBox8.Location = new Point(46, 88);
-            textBox8.Multiline = true;
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(533, 30);
-            textBox8.TabIndex = 37;
-            textBox8.Text = "Buscar";
-            // 
-            // button3
-            // 
-            button3.Location = new Point(975, 24);
-            button3.Name = "button3";
-            button3.Size = new Size(148, 38);
-            button3.TabIndex = 36;
-            button3.Text = "Limpiar";
-            button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            button4.Location = new Point(791, 24);
-            button4.Name = "button4";
-            button4.Size = new Size(152, 38);
-            button4.TabIndex = 34;
-            button4.Text = "Guardar";
-            button4.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView3
-            // 
-            dataGridView3.BackgroundColor = Color.White;
-            dataGridView3.BorderStyle = BorderStyle.None;
-            dataGridView3.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dataGridView3.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
-            dataGridView3.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle25.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle25.BackColor = SystemColors.Control;
-            dataGridViewCellStyle25.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle25.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle25.SelectionBackColor = Color.White;
-            dataGridViewCellStyle25.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle25.WrapMode = DataGridViewTriState.True;
-            dataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle25;
-            dataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView3.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, Column10 });
-            dataGridViewCellStyle26.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle26.BackColor = Color.White;
-            dataGridViewCellStyle26.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle26.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle26.SelectionBackColor = Color.White;
-            dataGridViewCellStyle26.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle26.WrapMode = DataGridViewTriState.False;
-            dataGridView3.DefaultCellStyle = dataGridViewCellStyle26;
-            dataGridView3.EnableHeadersVisualStyles = false;
-            dataGridView3.Location = new Point(46, 135);
-            dataGridView3.Name = "dataGridView3";
-            dataGridView3.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle27.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle27.BackColor = Color.White;
-            dataGridViewCellStyle27.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle27.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle27.SelectionBackColor = Color.White;
-            dataGridViewCellStyle27.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle27.WrapMode = DataGridViewTriState.True;
-            dataGridView3.RowHeadersDefaultCellStyle = dataGridViewCellStyle27;
-            dataGridView3.RowHeadersWidth = 51;
-            dataGridView3.Size = new Size(930, 523);
-            dataGridView3.TabIndex = 22;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "Id Detalle";
-            dataGridViewTextBoxColumn1.MinimumWidth = 6;
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Id Factura";
-            dataGridViewTextBoxColumn2.MinimumWidth = 6;
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Fecha Factura";
-            dataGridViewTextBoxColumn3.MinimumWidth = 6;
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Nombre";
-            dataGridViewTextBoxColumn4.MinimumWidth = 6;
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            dataGridViewTextBoxColumn5.HeaderText = "Cantidad";
-            dataGridViewTextBoxColumn5.MinimumWidth = 6;
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.Width = 125;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            dataGridViewTextBoxColumn6.HeaderText = "Precio Unitario";
-            dataGridViewTextBoxColumn6.MinimumWidth = 6;
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.Width = 125;
-            // 
-            // Column10
-            // 
-            Column10.HeaderText = "Valor Vendido";
-            Column10.MinimumWidth = 6;
-            Column10.Name = "Column10";
-            Column10.Width = 125;
-            // 
-            // button1
-            // 
-            button1.FlatStyle = FlatStyle.System;
-            button1.Location = new Point(748, 615);
-            button1.Name = "button1";
-            button1.Size = new Size(148, 38);
-            button1.TabIndex = 33;
-            button1.Text = "Limpiar";
-            button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            button2.BackgroundImageLayout = ImageLayout.None;
-            button2.FlatAppearance.BorderColor = Color.Red;
-            button2.FlatAppearance.BorderSize = 2;
-            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
-            button2.FlatStyle = FlatStyle.System;
-            button2.Location = new Point(551, 615);
-            button2.Name = "button2";
-            button2.Size = new Size(152, 38);
-            button2.TabIndex = 31;
-            button2.Text = "Guardar";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label12.Location = new Point(551, 272);
-            label12.Name = "label12";
-            label12.Size = new Size(104, 27);
-            label12.TabIndex = 22;
-            label12.Text = "Nombre";
-            // 
-            // textBox5
-            // 
-            textBox5.BorderStyle = BorderStyle.None;
-            textBox5.Location = new Point(551, 183);
-            textBox5.Multiline = true;
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(332, 34);
-            textBox5.TabIndex = 21;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label13.Location = new Point(551, 142);
-            label13.Name = "label13";
-            label13.Size = new Size(127, 27);
-            label13.TabIndex = 20;
-            label13.Text = "Id Factura";
+            dateTimePicker1.Location = new Point(482, 234);
+            dateTimePicker1.Margin = new Padding(3, 2, 3, 2);
+            dateTimePicker1.Name = "dateTimePicker1";
+            dateTimePicker1.Size = new Size(291, 23);
+            dateTimePicker1.TabIndex = 38;
             // 
             // label14
             // 
             label14.AutoSize = true;
             label14.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.Location = new Point(99, 34);
+            label14.Location = new Point(87, 26);
             label14.Name = "label14";
-            label14.Size = new Size(121, 41);
+            label14.Size = new Size(97, 32);
             label14.TabIndex = 37;
             label14.Text = "Factura";
             // 
             // textBox6
             // 
             textBox6.ForeColor = SystemColors.InactiveCaption;
-            textBox6.Location = new Point(99, 93);
+            textBox6.Location = new Point(87, 70);
+            textBox6.Margin = new Padding(3, 2, 3, 2);
             textBox6.Multiline = true;
             textBox6.Name = "textBox6";
-            textBox6.Size = new Size(430, 30);
+            textBox6.Size = new Size(377, 24);
             textBox6.TabIndex = 35;
             textBox6.Text = "Buscar";
             // 
@@ -635,38 +463,39 @@
             dataGridView2.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dataGridView2.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
             dataGridView2.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = SystemColors.Control;
-            dataGridViewCellStyle19.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle19.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle19.SelectionBackColor = Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle19.WrapMode = DataGridViewTriState.True;
-            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = Color.White;
+            dataGridViewCellStyle4.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dataGridView2.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView2.Columns.AddRange(new DataGridViewColumn[] { Column7, Column8, Column9 });
-            dataGridViewCellStyle20.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = Color.White;
-            dataGridViewCellStyle20.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle20.ForeColor = SystemColors.ControlText;
-            dataGridViewCellStyle20.SelectionBackColor = Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle20.WrapMode = DataGridViewTriState.False;
-            dataGridView2.DefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.White;
+            dataGridViewCellStyle5.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle5.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.False;
+            dataGridView2.DefaultCellStyle = dataGridViewCellStyle5;
             dataGridView2.EnableHeadersVisualStyles = false;
-            dataGridView2.Location = new Point(99, 142);
+            dataGridView2.Location = new Point(87, 106);
+            dataGridView2.Margin = new Padding(3, 2, 3, 2);
             dataGridView2.Name = "dataGridView2";
             dataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle21.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle21.BackColor = Color.White;
-            dataGridViewCellStyle21.Font = new Font("Segoe UI", 9F);
-            dataGridViewCellStyle21.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle21.SelectionBackColor = Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = Color.Black;
-            dataGridViewCellStyle21.WrapMode = DataGridViewTriState.True;
-            dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle6.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = Color.White;
+            dataGridViewCellStyle6.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle6.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle6.WrapMode = DataGridViewTriState.True;
+            dataGridView2.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             dataGridView2.RowHeadersWidth = 51;
-            dataGridView2.Size = new Size(430, 523);
+            dataGridView2.Size = new Size(376, 392);
             dataGridView2.TabIndex = 34;
             // 
             // Column7
@@ -690,38 +519,266 @@
             Column9.Name = "Column9";
             Column9.Width = 125;
             // 
-            // dateTimePicker1
+            // button1
             // 
-            dateTimePicker1.Location = new Point(551, 312);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(332, 27);
-            dateTimePicker1.TabIndex = 38;
+            button1.FlatStyle = FlatStyle.System;
+            button1.Location = new Point(654, 461);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(130, 28);
+            button1.TabIndex = 33;
+            button1.Text = "Limpiar";
+            button1.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // button2
             // 
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Location = new Point(551, 440);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(332, 34);
-            textBox1.TabIndex = 40;
+            button2.BackgroundImageLayout = ImageLayout.None;
+            button2.FlatAppearance.BorderColor = Color.Red;
+            button2.FlatAppearance.BorderSize = 2;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.System;
+            button2.Location = new Point(482, 461);
+            button2.Margin = new Padding(3, 2, 3, 2);
+            button2.Name = "button2";
+            button2.Size = new Size(133, 28);
+            button2.TabIndex = 31;
+            button2.Text = "Guardar";
+            button2.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label12.Location = new Point(482, 204);
+            label12.Name = "label12";
+            label12.Size = new Size(68, 22);
+            label12.TabIndex = 22;
+            label12.Text = "Fecha";
+            // 
+            // textBox5
+            // 
+            textBox5.BorderStyle = BorderStyle.None;
+            textBox5.Location = new Point(482, 137);
+            textBox5.Margin = new Padding(3, 2, 3, 2);
+            textBox5.Multiline = true;
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(290, 26);
+            textBox5.TabIndex = 21;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label13.Location = new Point(482, 106);
+            label13.Name = "label13";
+            label13.Size = new Size(105, 22);
+            label13.TabIndex = 20;
+            label13.Text = "Id Factura";
+            // 
+            // tabPage3
+            // 
+            tabPage3.BackColor = Color.Silver;
+            tabPage3.Controls.Add(cantidadTxt);
+            tabPage3.Controls.Add(button5);
+            tabPage3.Controls.Add(fechaFacturaDate);
+            tabPage3.Controls.Add(label1);
+            tabPage3.Controls.Add(idFacturaTxt);
+            tabPage3.Controls.Add(label2);
+            tabPage3.Controls.Add(comboBox4);
+            tabPage3.Controls.Add(textBox8);
+            tabPage3.Controls.Add(button3);
+            tabPage3.Controls.Add(button4);
+            tabPage3.Controls.Add(detallesDtG);
+            tabPage3.Location = new Point(4, 24);
+            tabPage3.Margin = new Padding(3, 2, 3, 2);
+            tabPage3.Name = "tabPage3";
+            tabPage3.Size = new Size(1191, 534);
+            tabPage3.TabIndex = 2;
+            tabPage3.Text = "LIsta Productos";
+            // 
+            // cantidadTxt
+            // 
+            cantidadTxt.ForeColor = SystemColors.InactiveCaption;
+            cantidadTxt.Location = new Point(875, 68);
+            cantidadTxt.Margin = new Padding(3, 2, 3, 2);
+            cantidadTxt.Multiline = true;
+            cantidadTxt.Name = "cantidadTxt";
+            cantidadTxt.Size = new Size(127, 24);
+            cantidadTxt.TabIndex = 44;
+            cantidadTxt.Text = "Cantidad";
+            // 
+            // button5
+            // 
+            button5.Location = new Point(374, 466);
+            button5.Margin = new Padding(3, 2, 3, 2);
+            button5.Name = "button5";
+            button5.Size = new Size(133, 28);
+            button5.TabIndex = 43;
+            button5.Text = "Agregar Produco";
+            button5.UseVisualStyleBackColor = true;
+            button5.Click += button5_Click;
+            // 
+            // fechaFacturaDate
+            // 
+            fechaFacturaDate.Location = new Point(350, 34);
+            fechaFacturaDate.Margin = new Padding(3, 2, 3, 2);
+            fechaFacturaDate.Name = "fechaFacturaDate";
+            fechaFacturaDate.Size = new Size(291, 23);
+            fechaFacturaDate.TabIndex = 42;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(551, 399);
+            label1.Location = new Point(350, 7);
             label1.Name = "label1";
-            label1.Size = new Size(135, 27);
-            label1.TabIndex = 39;
-            label1.Text = "Valor Total";
+            label1.Size = new Size(68, 22);
+            label1.TabIndex = 41;
+            label1.Text = "Fecha";
+            // 
+            // idFacturaTxt
+            // 
+            idFacturaTxt.BorderStyle = BorderStyle.None;
+            idFacturaTxt.Location = new Point(40, 31);
+            idFacturaTxt.Margin = new Padding(3, 2, 3, 2);
+            idFacturaTxt.Multiline = true;
+            idFacturaTxt.Name = "idFacturaTxt";
+            idFacturaTxt.Size = new Size(290, 26);
+            idFacturaTxt.TabIndex = 40;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Century Gothic", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(40, 7);
+            label2.Name = "label2";
+            label2.Size = new Size(105, 22);
+            label2.TabIndex = 39;
+            label2.Text = "Id Factura";
+            // 
+            // comboBox4
+            // 
+            comboBox4.ForeColor = SystemColors.InactiveCaption;
+            comboBox4.FormattingEnabled = true;
+            comboBox4.Location = new Point(533, 68);
+            comboBox4.Margin = new Padding(3, 2, 3, 2);
+            comboBox4.Name = "comboBox4";
+            comboBox4.Size = new Size(322, 23);
+            comboBox4.TabIndex = 38;
+            comboBox4.Text = "Filtrar";
+            // 
+            // textBox8
+            // 
+            textBox8.ForeColor = SystemColors.InactiveCaption;
+            textBox8.Location = new Point(40, 66);
+            textBox8.Margin = new Padding(3, 2, 3, 2);
+            textBox8.Multiline = true;
+            textBox8.Name = "textBox8";
+            textBox8.Size = new Size(467, 24);
+            textBox8.TabIndex = 37;
+            textBox8.Text = "Buscar";
+            // 
+            // button3
+            // 
+            button3.Location = new Point(733, 466);
+            button3.Margin = new Padding(3, 2, 3, 2);
+            button3.Name = "button3";
+            button3.Size = new Size(130, 28);
+            button3.TabIndex = 36;
+            button3.Text = "Limpiar";
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            button4.Location = new Point(869, 466);
+            button4.Margin = new Padding(3, 2, 3, 2);
+            button4.Name = "button4";
+            button4.Size = new Size(133, 28);
+            button4.TabIndex = 34;
+            button4.Text = "Guardar";
+            button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
+            // 
+            // dataGridView3
+            // 
+            detallesDtG.BackgroundColor = Color.White;
+            detallesDtG.BorderStyle = BorderStyle.None;
+            detallesDtG.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            detallesDtG.ClipboardCopyMode = DataGridViewClipboardCopyMode.Disable;
+            detallesDtG.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = SystemColors.Control;
+            dataGridViewCellStyle7.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle7.WrapMode = DataGridViewTriState.True;
+            detallesDtG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            detallesDtG.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            detallesDtG.Columns.AddRange(new DataGridViewColumn[] { Seleccion, Referencia, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6 });
+            dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = Color.White;
+            dataGridViewCellStyle8.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle8.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle8.SelectionBackColor = Color.White;
+            dataGridViewCellStyle8.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle8.WrapMode = DataGridViewTriState.False;
+            detallesDtG.DefaultCellStyle = dataGridViewCellStyle8;
+            detallesDtG.EnableHeadersVisualStyles = false;
+            detallesDtG.Location = new Point(40, 101);
+            detallesDtG.Margin = new Padding(3, 2, 3, 2);
+            detallesDtG.Name = "dataGridView3";
+            detallesDtG.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = Color.White;
+            dataGridViewCellStyle9.Font = new Font("Segoe UI", 9F);
+            dataGridViewCellStyle9.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle9.SelectionBackColor = Color.White;
+            dataGridViewCellStyle9.SelectionForeColor = Color.Black;
+            dataGridViewCellStyle9.WrapMode = DataGridViewTriState.True;
+            detallesDtG.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            detallesDtG.RowHeadersWidth = 51;
+            detallesDtG.Size = new Size(962, 361);
+            detallesDtG.TabIndex = 22;
+            // 
+            // Seleccion
+            // 
+            Seleccion.HeaderText = "Seleccion";
+            Seleccion.Name = "Seleccion";
+            // 
+            // Referencia
+            // 
+            Referencia.HeaderText = "Referencia";
+            Referencia.Name = "Referencia";
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Nombre";
+            dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            dataGridViewTextBoxColumn5.HeaderText = "Cantidad";
+            dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            dataGridViewTextBoxColumn5.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            dataGridViewTextBoxColumn6.HeaderText = "Precio Unitario";
+            dataGridViewTextBoxColumn6.MinimumWidth = 6;
+            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            dataGridViewTextBoxColumn6.Width = 125;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1445, 766);
+            ClientSize = new Size(1199, 562);
             Controls.Add(tabControl1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestion de Facturas";
@@ -731,10 +788,10 @@
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             tabPage2.ResumeLayout(false);
             tabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
             tabPage3.ResumeLayout(false);
             tabPage3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)detallesDtG).EndInit();
             ResumeLayout(false);
         }
 
@@ -771,14 +828,7 @@
         private TextBox textBox8;
         private Button button3;
         private Button button4;
-        private DataGridView dataGridView3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn Column10;
+        private DataGridView detallesDtG;
         private Label label10;
         private Label label14;
         private TextBox textBox6;
@@ -792,7 +842,16 @@
         private DataGridViewTextBoxColumn Column8;
         private DataGridViewTextBoxColumn Column9;
         private DateTimePicker dateTimePicker1;
-        private TextBox textBox1;
+        private Button button5;
+        private DateTimePicker fechaFacturaDate;
         private Label label1;
+        private TextBox idFacturaTxt;
+        private Label label2;
+        private TextBox cantidadTxt;
+        private DataGridViewCheckBoxColumn Seleccion;
+        private DataGridViewTextBoxColumn Referencia;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }
