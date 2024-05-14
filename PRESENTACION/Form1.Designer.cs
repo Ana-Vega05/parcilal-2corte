@@ -54,7 +54,6 @@
             label7 = new Label();
             label6 = new Label();
             label5 = new Label();
-            Txt_Referencia = new TextBox();
             label4 = new Label();
             dataGridView1 = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -133,7 +132,6 @@
             tabPage1.Controls.Add(label7);
             tabPage1.Controls.Add(label6);
             tabPage1.Controls.Add(label5);
-            tabPage1.Controls.Add(Txt_Referencia);
             tabPage1.Controls.Add(label4);
             tabPage1.Controls.Add(dataGridView1);
             tabPage1.Location = new Point(4, 24);
@@ -302,16 +300,7 @@
             label5.Size = new Size(84, 22);
             label5.TabIndex = 7;
             label5.Text = "Nombre";
-            // 
-            // Txt_Referencia
-            // 
-            Txt_Referencia.BorderStyle = BorderStyle.None;
-            Txt_Referencia.Location = new Point(746, 119);
-            Txt_Referencia.Margin = new Padding(3, 2, 3, 2);
-            Txt_Referencia.Multiline = true;
-            Txt_Referencia.Name = "Txt_Referencia";
-            Txt_Referencia.Size = new Size(290, 26);
-            Txt_Referencia.TabIndex = 6;
+            
             // 
             // label4
             // 
@@ -817,7 +806,6 @@
         private Label label7;
         private Label label6;
         private Label label5;
-        private TextBox Txt_Referencia;
         private Label label4;
         private ComboBox comboBox3;
         private TextBox textBox7;

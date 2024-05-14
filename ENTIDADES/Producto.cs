@@ -15,6 +15,20 @@ namespace ENTIDADES
         public decimal PrecioUnitario { get; set; }
         public EstadoProducto EstadoProducto { get; set; }
 
+        public Producto()
+        {
 
+        }
+
+        public Producto(string referencia, string nombre, int existencias, int stockMinimo, decimal precioUnitario, EstadoProducto estadoProducto)
+        {
+            Referencia = referencia;
+            Nombre = nombre;
+            Existencias = existencias;
+            StockMinimo = stockMinimo;
+            PrecioUnitario = precioUnitario;
+            EstadoProducto = estadoProducto;
+        }
     }
-}
+    }
+
